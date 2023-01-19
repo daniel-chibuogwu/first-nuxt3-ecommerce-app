@@ -9,12 +9,14 @@
 </template>
 
 <script setup>
+useHead({
+  title: 'Chillings Dojo | Chilled Merch',
+  meta: [
+    {name: 'description', content: "chilled boy merch"}
+  ],
+});
 definePageMeta({
   layout: 'products-custom',
 });
 const { data: products } = await useFetch('https://fakestoreapi.com/products');
 </script>
-
-<style scoped>
-
-</style>
